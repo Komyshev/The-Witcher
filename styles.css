@@ -1,0 +1,257 @@
+html {height: 100%;}
+
+body {
+    margin: 0;
+    background: #03060c url(img/bg1024.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+.work_area {
+    position: absolute;
+    width: 786px;
+    height: 695px;
+    left: 327px;
+    top: 102px;
+}
+
+
+.top_element {
+    position: absolute;
+    width: 284px;
+    height: 257px;
+    left: calc(50% - 284px/2);
+    top: 75px;
+
+
+   
+}
+
+.frame3 {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+    position: absolute;
+    width: 652px;
+    height: 252px;
+    left: calc(50% - 652px/2);
+    top: 385px;
+}
+
+
+.group76 {
+    position: static;
+    width: 188px;
+    height: 252px;
+    left: 464px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 2;
+    align-self: center;
+    margin: 44px 0px;
+
+/* Inside Auto Layout */
+    flex: none;
+    order: 2;
+    align-self: center;
+    margin: 111px 0px;
+    
+
+    
+    
+}
+
+
+
+.ava76 {
+    
+    position: absolute;
+    width: 188px;
+    height: 188px;
+    left: calc(50% - 188px/2 + 232px);
+    top: 0px;
+
+    border-radius: 121px;
+   
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%) fixed;
+    -webkit-background-clip: border-box;
+    border: 2px solid transparent;
+}
+
+
+
+.text76 {
+    position: absolute;
+    font-weight: bold;
+    height: 35px;
+    left: calc(50% - 97px/2 + 232.5px);
+    top: 217px;
+
+    /* Heading 3 */
+    font-family: Crimson Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 110%;
+
+    /* or 35px */
+    text-align: center;
+    
+    
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+    -webkit-background-clip: text;
+    /* Gradient text */
+    color: transparent;
+}
+
+
+
+.group75 {
+    position: static;
+    width: 188px;
+    height: 252px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    align-self: center;
+    margin: 44px 0px;
+    
+}
+
+.ava75 {
+    position: absolute;
+    width: 188px;
+    height: 188px;
+    left: calc(50% - 188px/2 - 232px);
+    top: 0px;
+
+    border-radius: 121px;
+   
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%) fixed;
+    -webkit-background-clip: border-box;
+    border: 2px solid transparent;
+}
+
+.text75 {
+    position: absolute;
+    font-weight: bold;
+    height: 35px;
+    left: calc(50% - 117px/2 - 232.5px);
+    top: 217px;
+
+    /* Heading 3 */
+    font-family: Crimson Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 110%;
+
+    /* or 35px */
+    text-align: center;
+
+    /* Gradient text */
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+    -webkit-background-clip: text;
+    /* Gradient text */
+    color: transparent;
+}
+
+.group74 {
+    position: static;
+    width: 188px;
+    height: 252px;
+    left: 232px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    align-self: center;
+    margin: 44px 0px;
+    
+}
+
+.ava74 {
+    
+    position: absolute;
+    width: 188px;
+    height: 188px;
+    left: calc(50% - 188px/2);
+    top: 0px;
+
+    border-radius: 121px;
+   
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%) fixed;
+    -webkit-background-clip: border-box;
+    border: 2px solid transparent;
+}
+
+.text74 {
+    position: absolute;
+    font-weight: bold;
+    height: 35px;
+    left: calc(50% - 102px/2);
+    top: 217px;
+
+    /* Heading 3 */
+    font-family: Crimson Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 110%;
+
+    /* or 35px */
+    text-align: center;
+
+    /* Gradient text */
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+    -webkit-background-clip: text;
+    /* Gradient text */
+    color: transparent;
+}
+
+@media screen and (min-width: 1024px){
+    body {
+       
+    margin: 0;
+    background: #03060c url(img/bg1440.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    }
+}
+
+@media screen and (max-width: 768px){
+    body {
+       
+    margin: 0;
+    background: #03060c url(img/bg768.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    }
+}
+
+@media screen and (max-width: 320px){
+    body {
+       
+    margin: 0;
+    background: #03060c url(img/bg320.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    }
+}
+
+  
