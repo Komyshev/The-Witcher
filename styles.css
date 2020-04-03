@@ -1,4 +1,6 @@
-html {height: 100%;}
+html {
+    height: 100%;
+}
 
 body {
     margin: 0;
@@ -7,31 +9,22 @@ body {
     height: 100%;
 }
 
-
-
 .work_area {
     display: flex;
     flex-direction: column;
     height: 90%;
     padding: 2%;
     position: relative;
-
     justify-content: space-around;
-    
-    
 }
-
 
 .top_element {
     width: 380px;
     height: 345px;
     display: flex;
     top: 15px;
-    
     position: relative;
-    
     margin: auto;
-       
 }
 
 .frame3 {
@@ -40,224 +33,151 @@ body {
     padding: 0px;
     top: 50px;
     position: relative;
-    
     margin: auto;
-   
-    
     justify-content: space-around;
-    
     flex-wrap: wrap;
 }
 
 .avatar {
-           
-          
-        position: relative;
-        width: 180px;
-        height: 180px;
-        margin: auto;
-
-        border-radius: 121px;
-        
-        
-      }
-      
-.gradient-border{
-  width: 180px;
-  height: 180px;
-  
-  border-radius: 121px;
-  border: 2px solid transparent;
-  position: relative;
-  
-}	
-.gradient-border:before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
-  z-index: -2;
+    position: relative;
+    width: 188px;
+    height: 188px;
+    margin: auto;
+    border-radius: 121px;
+    box-sizing: border-box;
 }
 
+.gradient-border {
+    width: 188px;
+    height: 188px;
+    border-radius: 121px;
+    border: 2px solid transparent;
+    position: relative;
+}
 
-
-
+.gradient-border:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+    z-index: -2;
+}
 
 .text7 {
     position: relative;
     font-weight: bold;
     height: 35px;
-    
     top: 10px;
-
     /* Heading 3 */
     font-family: Crimson Text;
     font-style: normal;
     font-weight: normal;
     font-size: 32px;
     line-height: 110%;
-
     /* or 35px */
     text-align: center;
-    
-    
     background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
     background-clip: text;
     /* Gradient text */
     color: transparent;
 }
 
-
-
-
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     body {
-       
-    margin: 0;
-    background: #03060c url(img/bg1440.png) no-repeat;
-    background-size: cover;
-    height: 100%;
-
+        margin: 0;
+        background: #03060c url(img/bg1440.png) no-repeat;
+        background-size: cover;
+        height: 100%;
     }
-    
     .frame3 {
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-
-    position: relative;
-    margin: auto;
-    
-    width: 960px;
-    
-    justify-content: space-around;
-    
-    flex-wrap: wrap;
-    
-    
-    }
-    
-    
-    
-    
-}
-
-@media screen and (max-width: 768px){
-    body {
-       
-    margin: 0;
-    background: #03060c url(img/bg768.png) no-repeat;
-    background-size: cover;
-    height: 100%;
-
-    }
-    
-    .top_element {
-    width: 284px;
-    height: 257px;
-    display: flex;
-    top: 15px;
-    
-    position: relative;
-    
-    margin: auto;
-       
-    }
-    
-    .frame3 {
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-
-    position: relative;
-    margin: auto;
-    
-    width: 100%;
-    
-    justify-content: space-around;
-    
-    flex-wrap: wrap;
-    
-    
-    }
-    
-
-}
-
-@media screen and (max-width: 320px){
-    body {
-       
-    margin: 0;
-    background: #03060c url(img/bg320.png) no-repeat;
-    background-size: cover;
-    height: 100%;
-
-    }
-    
-    .avatar {
-           
-          
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
         position: relative;
-        width: 115px;
-        height: 115px;
         margin: auto;
-
-        border-radius: 121px;
-        
-        
-      }
-      
-    .gradient-border{
-  width: 115px;
-  height: 115px;
-  
-  border-radius: 121px;
-  border: 2px solid transparent;
-  position: relative;
-  
-}	
-      
-      .text7 {
-    position: relative;
-    font-weight: bold;
-    height: 35px;
-    
-    top: 10px;
-
-    /* Heading 3 */
-    font-family: Crimson Text;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 110%;
-
-    /* or 35px */
-    text-align: center;
-    
-    
-    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
-    background-clip: text;
-    /* Gradient text */
-    color: transparent;
+        width: 960px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        background: #03060c url(img/bg768.png) no-repeat;
+        background-size: cover;
+        height: 100%;
+    }
     .top_element {
-    width: 202px;
-    height: 181px;
-    display: flex;
-    top: 15px;
-    
-    position: relative;
-    
-    margin: auto;
-       
-}
-    
-    
+        width: 284px;
+        height: 257px;
+        display: flex;
+        top: 15px;
+        position: relative;
+        margin: auto;
+    }
+    .frame3 {
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        position: relative;
+        margin: auto;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
-  
+@media screen and (max-width: 320px) {
+    body {
+        margin: 0;
+        background: #03060c url(img/bg320.png) no-repeat;
+        background-size: cover;
+        height: 100%;
+    }
+    .avatar {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        box-sizing: border-box;
+        border-radius: 121px;
+    }
+    .gradient-border {
+        width: 120px;
+        height: 120px;
+        border-radius: 121px;
+        border: 2px solid transparent;
+        position: relative;
+    }
+    .text7 {
+        position: relative;
+        font-weight: bold;
+        height: 35px;
+        top: 10px;
+        /* Heading 3 */
+        font-family: Crimson Text;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 110%;
+        /* or 35px */
+        text-align: center;
+        background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+        background-clip: text;
+        /* Gradient text */
+        color: transparent;
+    }
+    .top_element {
+        width: 202px;
+        height: 181px;
+        display: flex;
+        top: 15px;
+        position: relative;
+        margin: auto;
+    }
+}
