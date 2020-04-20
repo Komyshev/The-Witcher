@@ -1,0 +1,270 @@
+
+
+.person-card {
+    position: relative; 
+    width: 280px;
+    height: 352px;
+}
+
+
+.round-image {
+    position: relative;
+    margin: auto;
+    border-radius: 50% 50%;
+    box-sizing: border-box;
+    background-image: url(./emhyr.jpg);
+    
+}
+
+.gradient-border {
+    border-radius: 121px;
+    border: 2px solid transparent;
+    position: relative;
+    left: calc(50% - 166px/2 + 1px);
+    top: 37px;
+    
+}
+
+.gradient-border:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+    z-index: -2;
+}
+
+.sizeofavatar {
+    width: 162px;
+    height: 162px;
+}
+
+.icon-number {
+    position: absolute;
+    left: calc(50% - 68px/2 - 60px);
+    top: 152px;
+    width: 68px;
+    height: 73px;
+}
+
+.icon-image {
+    position: absolute;
+    width: 68px;
+    height: 73px;
+    
+}
+
+.number {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 10.96%;
+    bottom: 5.48%;
+    
+    
+    
+    font-family: Crimson Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 55px;
+    
+    
+    text-align: center;
+    
+    
+    background: linear-gradient(180deg, #F4DCB3 0%, #5C3D06 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text1 {
+    position: absolute;
+    width: 280px;
+    height: 70px;
+    
+    top: 251px;
+    margin: auto;
+}
+
+.name {
+    position: static;
+    height: 35px;
+    left: 0%;
+    right: 0%;
+    top: 0px;
+
+    
+    font-family: Crimson Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 110%;
+
+    
+    text-align: center;
+
+    
+    background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+    flex: none;
+    order: 0;
+    align-self: center;
+    margin: 0px 10px;
+}
+
+.post {
+    position: static;
+    height: 25px;
+    left: 37.77%;
+    right: 37.77%;
+    top: 45px;
+
+    
+    font-family: Crimson Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 148.6%;
+
+    
+    text-align: center;
+    letter-spacing: 0.035em;
+
+    
+    color: #DBAE64;
+
+    
+    flex: none;
+    order: 1;
+    align-self: center;
+    margin: 0px 10px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 320px) {
+    body {
+        margin: 0;
+        background-image: url(bg320.png), linear-gradient(180deg, rgba(12, 12, 12, 0) 0%, #0C0C0C 100%);
+        background-size: cover;
+        height: 100%;
+    }
+    
+    .person-card {
+        position: relative; 
+        width: 121px;
+        height: 224px;
+    }
+    
+    .sizeofavatar {
+        width: 115px;
+        height: 115px;
+    }
+    
+    .gradient-border {
+        left: calc(50% - 120px/2);
+        top: 8px;
+    }
+    
+    .icon-number {
+        position: absolute;
+        width: 30px;
+        height: 33px;
+        left: calc(50% - 30px/2 - 42.5px);
+        top: 94px;
+    }
+
+    .icon-image {
+        position: absolute;
+        width: 30px;
+        height: 32px;
+    }
+
+    .number {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 12.12%;
+        bottom: 3.03%;
+    
+        font-family: Crimson Text;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 26px;
+
+        text-align: center;
+
+        background: linear-gradient(180deg, #F4DCB3 0%, #5C3D06 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 121px;
+        height: 65px;
+        left: calc(50% - 121px/2 + 0.5px);
+        top: 143px;
+    }
+
+    .name {
+        position: static;
+        height: 42px;
+        left: 0%;
+        right: 0%;
+        top: 0px;
+
+        font-family: Crimson Text;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19px;
+        line-height: 110%;
+    
+        text-align: center;
+
+        background: linear-gradient(180deg, #FFD28D 47.92%, #352000 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    
+        flex: none;
+        order: 0;
+        align-self: center;
+        margin: 0px 5px;
+    }
+
+    .post {
+        position: static;
+        height: 18px;
+        left: 25%;
+        right: 25%;
+        top: 47px;
+
+        font-family: Crimson Text;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 148.6%;
+
+        text-align: center;
+        letter-spacing: 0.035em;
+
+        color: #DBAE64;
+        
+        flex: none;
+        order: 1;
+        align-self: center;
+        margin: 0px 5px;
+    }
+}
