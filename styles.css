@@ -21,15 +21,25 @@ body {
         width: 100%;
     }
 
+.top_element_outer {
+    
+}
+
+.top_element_round_size {
+    width: 330px;
+    height: 330px;
+    margin: auto;
+}
+
 .top_element {
     /* display: block; */
     /* max-width: 100%; */
     /* height: auto; */
     
     position: relative;
-width: 284px;
-height: 257px;
-left: calc(50% - 284px/2);
+    width: 284px;
+    height: 257px;
+    left: calc(50% - 284px/2);
 
 }
 
