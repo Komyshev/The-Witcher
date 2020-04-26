@@ -15,6 +15,28 @@ function generateAvatarHtml(name, imageName) {
     return ht;
 }
 
+function generatePersonCardHtml(personCard) {
+  let ht = '<div class="person-card">\
+ <!-- style="width: 188px;height: 188px;" -->\
+     <!-- style="width: 280px;height: 352px;" -->\
+        <div class="gradient-border2 sizeofavatar">\
+            <img src="./img/' + personCard.image + '"  class="round-image sizeofavatar"/>\
+        </div>\
+        <div class="icon-number">\
+            <img src="./img/icon_number.png" class="icon-image"/>\
+            <div class="number">' + personCard.child + '</div>\
+        </div>\
+        <div class="text1">\
+            <div class="name">' + personCard.name + '</div>\
+            <div class="post">' + personCard.post + '</div>\
+        \
+        </div>\
+        <!-- <img src="personcard.png" style="position: absolute; left: 188px;top: 188px;"/> -->\
+    </div>';
+            
+    return ht;
+}
+
 function getNamefromHtml(strHtml) {
   let name = strHtml.substring(strHtml.lastIndexOf("/")+1);
   return name.slice(0, -4);
@@ -42,10 +64,26 @@ for (let a of array) {
   
   
   if (a.parent) {
-    array[a.parent].child++;
+    array[a.parent-1].child++;
     a.child = 0;
   }  
+
 }
+
+for (let a of array) {
+  a.child = 0; 
+
+}
+
+for (let a of array) {
+  if (a.parent-1 > 0) {
+    array[a.parent - 1].child++;
+    
+  }  
+
+}
+
+console.log(array);
 
 function getChildNames(topName) {
     let topId;
@@ -59,6 +97,23 @@ function getChildNames(topName) {
     for (let a of array) {
         if (a.parent == topId) {
             childNames.push([a.name, a.image]);
+        }
+    }
+    return childNames;
+}
+
+function getChilds(topName) {
+    let topId;
+    let childNames = [];
+    for (let a of array) {
+        if (a.name.toLowerCase() == topName.toLowerCase()) {
+            topId = a.id;
+            break;
+        }
+    }
+    for (let a of array) {
+        if (a.parent == topId) {
+            childNames.push(a);
         }
     }
     return childNames;
@@ -79,12 +134,18 @@ for (var i = 0; i < personCards.length; i++) {
     document.querySelector('.top_element').classList.remove('top_element_default_size');
     
     frame3.innerHTML = '';
-    for (let a of getChildNames(name)) {
-        frame3.innerHTML += generateAvatarHtml(a[0], a[1]);
+    for (let a of getChilds(name)) {
+        frame3.innerHTML += generatePersonCardHtml(a);
     }
+    
+    personCards = document.querySelectorAll('.personCard');
+        console.log(personCards);
+        for (let a of personCards)
+        a.onclick = function(){
+            alert('Click!!');
+        }
   }
+
 }
-
-
 
 

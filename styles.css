@@ -37,13 +37,14 @@ body {
     /* height: auto; */
     
     position: relative;
-    
+    margin: auto;
     
 
 }
 
 .top_element_default_size {
-    
+    display: flex;
+    justify-content: center;
     width: 284px;
     height: 257px;
     
@@ -177,7 +178,7 @@ height: 345px;
     position: relative;
 
 
-top: 15px;
+
     }
     
     .top_element_default_size {
@@ -217,14 +218,21 @@ height: 401px;
 width: 202px;
 height: 181px;
 
-top: 15px;
     }
     
     .top_element_default_size {
-    
+    display: flex;
+    justify-content: center;
  width: 202px;
 height: 181px;
     
+}
+
+.top_element_round_size {
+        
+ width: 202px;
+height: 181px;
+    margin: auto;
 }
     
     .sizeav {
@@ -413,7 +421,7 @@ border: 1px solid #DBAE64;
 
 .person_card {
     background: linear-gradient(180deg, #F4DCB3 47.92%, #5C3D06 100%) fixed;
-    margin: 5px;
+    margin: auto;
 }
 
 .sizeav166 {

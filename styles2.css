@@ -16,7 +16,7 @@
     
 }
 
-.gradient-border {
+.gradient-border2 {
     border-radius: 121px;
     border: 2px solid transparent;
     position: relative;
@@ -25,7 +25,7 @@
     
 }
 
-.gradient-border:before {
+.gradient-border2:before {
     content: '';
     position: absolute;
     top: -2px;
