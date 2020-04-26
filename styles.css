@@ -37,10 +37,16 @@ body {
     /* height: auto; */
     
     position: relative;
+    
+    
+
+}
+
+.top_element_default_size {
+    
     width: 284px;
     height: 257px;
-    left: calc(50% - 284px/2);
-
+    
 }
 
 .frame3 {
@@ -125,11 +131,18 @@ margin: auto;
     
     .top_element {
     position: relative;
-width: 380px;
-height: 345px;
-left: calc(50% - 380px/2);
+    margin: auto;
+
 
     }
+    
+    .top_element_default_size {
+    display: flex;
+    justify-content: center;
+ width: 380px;
+height: 345px;
+    
+}
     
     .frame3 {
         display: flex;
@@ -162,11 +175,17 @@ left: calc(50% - 380px/2);
     /* height: auto; */
     
     position: relative;
-width: 444px;
-height: 401px;
-left: calc(50% - 444px/2);
+
+
 top: 15px;
     }
+    
+    .top_element_default_size {
+    
+    width: 444px;
+height: 401px;
+    
+}
     
     .frame3 {
         display: flex;
@@ -197,9 +216,16 @@ top: 15px;
         position: relative;
 width: 202px;
 height: 181px;
-left: calc(50% - 202px/2);
+
 top: 15px;
     }
+    
+    .top_element_default_size {
+    
+ width: 202px;
+height: 181px;
+    
+}
     
     .sizeav {
         width: 120px;

@@ -1,11 +1,11 @@
 
 
             
-function generateAvatarHtml(name) {
+function generateAvatarHtml(name, imageName) {
   let ht = '<div class="personCard">\
 \
                 <div class="gradient-border sizeav person_card">\
-                    <img src="./img/' + name + '.jpg" class="avatar sizeav">\
+                    <img src="./img/' + imageName + '" class="avatar sizeav">\
                 </div>\
 \
                 <div class="text7">' + name + '</div>\
@@ -28,13 +28,15 @@ function changePicName(strHtml, name) {
 
 
 
+
+
 frame3 = document.querySelector('.frame3');
 
 
 let array = global.inputArray
 for (let a of array) {
   if (!a.parent) {
-      frame3.innerHTML += generateAvatarHtml(a.name);
+      frame3.innerHTML += generateAvatarHtml(a.name, a.image);
       a.child = 0;
   }
   
@@ -43,29 +45,44 @@ for (let a of array) {
     array[a.parent].child++;
     a.child = 0;
   }  
-  
-  
-  
-  
+}
+
+function getChildNames(topName) {
+    let topId;
+    let childNames = [];
+    for (let a of array) {
+        if (a.name.toLowerCase() == topName.toLowerCase()) {
+            topId = a.id;
+            break;
+        }
+    }
+    for (let a of array) {
+        if (a.parent == topId) {
+            childNames.push([a.name, a.image]);
+        }
+    }
+    return childNames;
 }
 
 let personCards = document.querySelectorAll('.personCard');
 let topElement = document.querySelector('.top_element');
-console.log(frame3);
-console.log(personCards);
+
 
 for (var i = 0; i < personCards.length; i++) {
   personCards[i].onclick = function(){
-    console.log(topElement);
-    topElement.src = changePicName(topElement.src, getNamefromHtml(this.querySelector('.avatar').src));
+    let name = getNamefromHtml(this.querySelector('.avatar').src);
+    topElement.src = changePicName(topElement.src, name);
     document.querySelector('.top_element_outer').classList.add('gradient-border');
     document.querySelector('.top_element_outer').classList.add('top_element_round_size');
     document.querySelector('.top_element').classList.add('top_element_round_size');
     document.querySelector('.top_element').classList.add('avatar');
-    document.querySelector('.top_element').classList.remove('top_element');
-    console.log(document.querySelector('.top_element_outer'));
+    document.querySelector('.top_element').classList.remove('top_element_default_size');
     
-  };
+    frame3.innerHTML = '';
+    for (let a of getChildNames(name)) {
+        frame3.innerHTML += generateAvatarHtml(a[0], a[1]);
+    }
+  }
 }
 
 
