@@ -1,6 +1,21 @@
 
+let homeButtonStatus = 0;
+homeButton = document.querySelector('.logo');
+function homeButtonFunc(){
+    if (homeButtonStatus == 0) {
+        homeButton.hidden = 1;
+    }
+    if (homeButtonStatus == 1) {
+        homeButton.hidden = 0;
+    }
+}
 
-            
+homeButtonFunc();
+
+
+   
+
+   
 function generateAvatarHtml(name, imageName) {
   let ht = '<div class="personCard">\
 \
@@ -56,18 +71,19 @@ frame3 = document.querySelector('.frame3');
 
 
 let array = global.inputArray
-for (let a of array) {
-  if (!a.parent) {
-      frame3.innerHTML += generateAvatarHtml(a.name, a.image);
-      a.child = 0;
-  }
-  
-  
-  if (a.parent) {
-    array[a.parent-1].child++;
-    a.child = 0;
-  }  
 
+function makeHomeReal() {
+    frame3.innerHTML = '';
+    for (let a of array) {
+        if (!a.parent) {
+            frame3.innerHTML += generateAvatarHtml(a.name, a.image);
+        }
+    }
+}
+makeHomeReal();
+
+homeButton.onclick = function() {
+    makeHomeReal();
 }
 
 for (let a of array) {
@@ -123,8 +139,13 @@ let personCards = document.querySelectorAll('.personCard');
 let topElement = document.querySelector('.top_element');
 
 
+
+
+
 for (var i = 0; i < personCards.length; i++) {
   personCards[i].onclick = function(){
+    homeButtonStatus = 1;
+    homeButtonFunc();  
     let name = getNamefromHtml(this.querySelector('.avatar').src);
     topElement.src = changePicName(topElement.src, name);
     document.querySelector('.top_element_outer').classList.add('gradient-border');
@@ -138,8 +159,8 @@ for (var i = 0; i < personCards.length; i++) {
         frame3.innerHTML += generatePersonCardHtml(a);
     }
     
-    personCards = document.querySelectorAll('.personCard');
-        console.log(personCards);
+    personCards = document.querySelectorAll('.person-card');
+        
         for (let a of personCards)
         a.onclick = function(){
             alert('Click!!');
