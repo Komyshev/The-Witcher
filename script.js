@@ -1,16 +1,32 @@
 
 let homeButtonStatus = 0;
+let previousElement = [];
+previousElement.push(null);
 homeButton = document.querySelector('.logoback');
+backButton = document.querySelector('.backButton');
 function homeButtonFunc(){
     if (homeButtonStatus == 0) {
         homeButton.hidden = 1;
+        backButton.hidden = 1;
     }
     if (homeButtonStatus == 1) {
         homeButton.hidden = 0;
+        backButton.hidden = 0;
     }
 }
 
+
+
+
+
+
+
 homeButtonFunc();
+
+backButton.onclick = function() {
+    previousElement.pop();
+    handler1(previousElement.pop());
+}
 
 
    
@@ -73,6 +89,16 @@ frame3 = document.querySelector('.frame3');
 let array = global.inputArray
 let topElement = document.querySelector('.top_element');
 
+for (let a of array) {
+  a.child = 0; 
+}
+
+
+for (let i = array.length - 1; i > 2; i--) {
+    let k = array[i].parent-1;
+    array[k].child += array[i].child + 1;
+}
+
 function makeHomeReal() {
     
     topElement.src = changePicName(topElement.src, 'logo.png');
@@ -99,14 +125,7 @@ homeButton.onclick = function() {
     makeHomeReal();
 }
 
-for (let a of array) {
-  a.child = 0; 
-}
 
-for (let i = array.length - 1; i > 0; i--) {
-    let k = array[i].parent-1;
-    array[k].child += array[i].child + 1;    
-}
 
 
 function getChildNames(topName) {
@@ -156,8 +175,11 @@ let personCards = document.querySelectorAll('.personCard');
 topElement = document.querySelector('.top_element');
 
 function handler1(str){
-    
-   
+    if (!str) {
+        makeHomeReal();
+        return;
+    }
+    previousElement.push(str);
     
     homeButtonStatus = 1;
     homeButtonFunc();
