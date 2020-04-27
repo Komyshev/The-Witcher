@@ -102,7 +102,7 @@ homeButton.onclick = function() {
 for (let a of array) {
   a.child = 0; 
 }
-alert(array.length);
+
 for (let i = array.length - 1; i > 0; i--) {
     let k = array[i].parent-1;
     array[k].child += array[i].child + 1;    
