@@ -1,6 +1,6 @@
 
 let homeButtonStatus = 0;
-homeButton = document.querySelector('.logo');
+homeButton = document.querySelector('.logoback');
 function homeButtonFunc(){
     if (homeButtonStatus == 0) {
         homeButton.hidden = 1;
@@ -101,15 +101,11 @@ homeButton.onclick = function() {
 
 for (let a of array) {
   a.child = 0; 
-
 }
-
-for (let a of array) {
-  if (a.parent-1 > 0) {
-    array[a.parent - 1].child++;
-    
-  }  
-
+alert(array.length);
+for (let i = array.length - 1; i > 0; i--) {
+    let k = array[i].parent-1;
+    array[k].child += array[i].child + 1;    
 }
 
 
@@ -178,7 +174,7 @@ function handler1(str){
         frame3.innerHTML += generatePersonCardHtml(a);
     }
     
-    personCards = document.querySelectorAll('.person-card');
+//    personCards = document.querySelectorAll('.person-card');
         
         // for (let a of personCards)
         // a.onclick = function(){
